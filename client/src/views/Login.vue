@@ -17,7 +17,6 @@
                   title="Logo"
                   class="login__logo"
               />
-              <!-- x   -->
               <form method="GET" action="feed.html" class="login__form">
                   <div class="login__input-container">
                       <input 
