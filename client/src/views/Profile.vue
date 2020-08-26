@@ -207,16 +207,7 @@ export default {
     width:152px;
     height: 152px;
     border-radius: 50%;
-    animation: 1.5s potato infinite linear;
-}
-
-@keyframes potato{
-    from{
-        transform: rotate(0turn);
-    }
-    to{
-        transform: rotate(1turn)
-    }
+    /* animation: 1.5s potato infinite linear; */
 }
 
 .profile__name,
