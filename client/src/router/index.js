@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue';
 import Login from '../views/Login.vue';
+import Curtidas from '../views/Curtidas.vue';
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,10 @@ Vue.use(VueRouter)
     path: '/login',
     name: 'Login',
     component: Login
+  },{
+    path: '/Curtidas',
+    name: 'Curtidas',
+    component: Curtidas
   }
 ]
 
