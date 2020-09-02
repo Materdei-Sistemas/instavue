@@ -1,8 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import About from '../views/About.vue'
-import EditarUsuario from '../views/EditarUsuario.vue'
+import About from '../views/About.vue';
+import Login from '../views/Login.vue';
+import Explore from'../views/Explore.vue';
+import Profile from '../views/Profile.vue';
+import Feed from '../views/Feed.vue';
+import EditarUsuario from '../views/EditarUsuario.vue';
+
 
 Vue.use(VueRouter)
 
@@ -22,6 +27,25 @@ const routes = [
     name: 'EditarUsuario',
     component: EditarUsuario
   },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '/explore',
+    name: 'Explore',
+    component: Explore
+  },{
+    path: '/profile',
+    name: 'Profile',
+    component: Profile
+  },
+  {
+    path: '/feed',
+    name: 'Feed',
+    component: Feed
+  }
 ]
 
 const router = new VueRouter({
