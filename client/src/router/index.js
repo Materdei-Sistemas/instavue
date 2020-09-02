@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue';
 import Login from '../views/Login.vue';
+import Profile from '../views/Profile.vue';
 import Feed from '../views/Feed.vue';
 
 Vue.use(VueRouter)
@@ -24,10 +25,15 @@ Vue.use(VueRouter)
     component: Login
   },
   {
+    path: '/profile',
+    name: 'Profile',
+    component: Profile
+  },
+  {
     path: '/feed',
     name: 'Feed',
     component: Feed
-  }  
+  }
 ]
 
 const router = new VueRouter({
