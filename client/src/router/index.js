@@ -6,11 +6,12 @@ import Login from '../views/Login.vue';
 import Explore from'../views/Explore.vue';
 import Profile from '../views/Profile.vue';
 import Feed from '../views/Feed.vue';
+import EditarUsuario from '../views/EditarUsuario.vue';
 
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
     name: 'Home',
@@ -20,6 +21,11 @@ Vue.use(VueRouter)
     path: '/about',
     name: 'About',
     component: About
+  },
+  {
+    path: '/editarusuario',
+    name: 'EditarUsuario',
+    component: EditarUsuario
   },
   {
     path: '/login',

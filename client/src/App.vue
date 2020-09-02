@@ -6,8 +6,9 @@
       <router-link to="/login">Login</router-link>|
       <router-link to="/profile">Profile</router-link>
       <router-link to="/feed">Feed</router-link>
+      <router-link to="/editarusuario">Editar Usuario</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
@@ -32,30 +33,14 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-    display: block;
+#nav {
+  padding: 30px;
 }
-body {
-    line-height: 1;
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
 }
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-input{
-    border:0;
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
