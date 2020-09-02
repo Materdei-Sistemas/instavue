@@ -3,8 +3,10 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue';
 import Login from '../views/Login.vue';
+import Explore from'../views/Explore.vue';
 import Profile from '../views/Profile.vue';
 import Feed from '../views/Feed.vue';
+
 
 Vue.use(VueRouter)
 
@@ -25,6 +27,10 @@ Vue.use(VueRouter)
     component: Login
   },
   {
+    path: '/explore',
+    name: 'Explore',
+    component: Explore
+  },{
     path: '/profile',
     name: 'Profile',
     component: Profile
