@@ -1,7 +1,7 @@
 <template>
    
   <div>
-    <Menu/>
+    <Header />
    <main class="explore">
                   <section class="people">
                 <ul class="people__list">
@@ -84,14 +84,14 @@
 </template>
 
 <script>
+import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Menu from '../components/Menu';
+
 export default {
     components: {
         Footer,
-        Menu
+        Header
     }
-
 }
 </script>
 

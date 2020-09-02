@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <main class="feed">
       <section class="photo">
         <header class="photo__header">
@@ -85,11 +86,13 @@
 </template>
 
 <script>
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export default {
   name: 'Feed',
   components: {
+    Header,
     Footer
   }
 }

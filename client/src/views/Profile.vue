@@ -1,25 +1,6 @@
 <template>
   <div>
-    <nav class="navigation">
-      <a href="feed.html">
-        <img src="../assets/images/navLogo.png" alt="logo" title="logo" class="navigation__logo" />
-      </a>
-      <div class="navigation__search-container">
-        <i class="fa fa-search"></i>
-        <input type="text" placeholder="Search" />
-      </div>
-      <div class="navigation__icons">
-        <a href="explore.html" class="navigation__link">
-          <i class="fa fa-compass"></i>
-        </a>
-        <a href="#" class="navigation__link">
-          <i class="fa fa-heart-o"></i>
-        </a>
-        <a href="profile.html" class="navigation__link">
-          <i class="fa fa-user-o"></i>
-        </a>
-      </div>
-    </nav>
+    <Header />
     <main class="profile-container">
       <section class="profile">
         <header class="profile__header">
@@ -129,10 +110,12 @@
   </div>
 </template>
 <script>
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 export default {
   name: "Profile",
   components: {
+    Header,
     Footer
   }
 };
