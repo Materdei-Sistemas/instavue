@@ -3,11 +3,11 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue';
 import Login from '../views/Login.vue';
+import Curtidas from '../views/Curtidas.vue';
 import Explore from'../views/Explore.vue';
 import Profile from '../views/Profile.vue';
 import Feed from '../views/Feed.vue';
 import EditarUsuario from '../views/EditarUsuario.vue';
-
 
 Vue.use(VueRouter)
 
@@ -31,6 +31,10 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: Login
+  },{
+    path: '/Curtidas',
+    name: 'Curtidas',
+    component: Curtidas
   },
   {
     path: '/explore',

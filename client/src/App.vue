@@ -7,6 +7,7 @@
       <router-link to="/profile">Profile</router-link>
       <router-link to="/feed">Feed</router-link>
       <router-link to="/editarusuario">Editar Usuario</router-link>
+      <router-link to="/curtidas">Curtidas</router-link>
     </div>
     <router-view />
   </div>
