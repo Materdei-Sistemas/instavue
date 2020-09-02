@@ -4,10 +4,14 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue';
 import Login from '../views/Login.vue';
 import Curtidas from '../views/Curtidas.vue';
+import Explore from'../views/Explore.vue';
+import Profile from '../views/Profile.vue';
+import Feed from '../views/Feed.vue';
+import EditarUsuario from '../views/EditarUsuario.vue';
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
     name: 'Home',
@@ -19,6 +23,11 @@ Vue.use(VueRouter)
     component: About
   },
   {
+    path: '/editarusuario',
+    name: 'EditarUsuario',
+    component: EditarUsuario
+  },
+  {
     path: '/login',
     name: 'Login',
     component: Login
@@ -26,6 +35,20 @@ Vue.use(VueRouter)
     path: '/Curtidas',
     name: 'Curtidas',
     component: Curtidas
+  },
+  {
+    path: '/explore',
+    name: 'Explore',
+    component: Explore
+  },{
+    path: '/profile',
+    name: 'Profile',
+    component: Profile
+  },
+  {
+    path: '/feed',
+    name: 'Feed',
+    component: Feed
   }
 ]
 
