@@ -7,6 +7,7 @@ const sequelize = new Sequelize({
 });
 
 sequelize.Post = sequelize.import('./Post.js');
+sequelize.Notification = sequelize.import('./Notification.js');
 
 // Sincroniza as definições de models com o banco de dados
 sequelize.sync();

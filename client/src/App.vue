@@ -8,6 +8,7 @@
       <router-link to="/feed">Feed</router-link>
       <router-link to="/editarusuario">Editar Usuario</router-link>
       <router-link to="/curtidas">Curtidas</router-link>
+      <router-link to="/notifications">Notifications</router-link>
     </div>
     <router-view />
   </div>
