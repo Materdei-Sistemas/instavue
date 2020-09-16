@@ -37,8 +37,8 @@
           </div>
         </header>
         <div class="profile__pictures">
-          <a href="image-detail.html" class="profile-picture">
-            <img src="../assets/images/feedPhoto.jpg" class="profile-picture__picture" />
+          <a v-for="picture in pictures" v-bind:key="picture.id" href="image-detail.html" class="profile-picture">
+            <img v-bind:src="picture.src.tiny" />
             <div class="profile-picture__overlay">
               <span class="profile-picture__number">
                 <i class="fa fa-heart"></i> 450
@@ -48,61 +48,7 @@
               </span>
             </div>
           </a>
-          <a href="image-detail.html" class="profile-picture">
-            <img src="../assets/images/feedPhoto.jpg" class="profile-picture__picture" />
-            <div class="profile-picture__overlay">
-              <span class="profile-picture__number">
-                <i class="fa fa-heart"></i> 450
-              </span>
-              <span class="profile-picture__number">
-                <i class="fa fa-comment"></i> 39
-              </span>
-            </div>
-          </a>
-          <a href="image-detail.html" class="profile-picture">
-            <img src="../assets/images/feedPhoto.jpg" class="profile-picture__picture" />
-            <div class="profile-picture__overlay">
-              <span class="profile-picture__number">
-                <i class="fa fa-heart"></i> 450
-              </span>
-              <span class="profile-picture__number">
-                <i class="fa fa-comment"></i> 39
-              </span>
-            </div>
-          </a>
-          <a href="image-detail.html" class="profile-picture">
-            <img src="../assets/images/feedPhoto.jpg" class="profile-picture__picture" />
-            <div class="profile-picture__overlay">
-              <span class="profile-picture__number">
-                <i class="fa fa-heart"></i> 450
-              </span>
-              <span class="profile-picture__number">
-                <i class="fa fa-comment"></i> 39
-              </span>
-            </div>
-          </a>
-          <a href="image-detail.html" class="profile-picture">
-            <img src="../assets/images/feedPhoto.jpg" class="profile-picture__picture" />
-            <div class="profile-picture__overlay">
-              <span class="profile-picture__number">
-                <i class="fa fa-heart"></i> 450
-              </span>
-              <span class="profile-picture__number">
-                <i class="fa fa-comment"></i> 39
-              </span>
-            </div>
-          </a>
-          <a href="image-detail.html" class="profile-picture">
-            <img src="../assets/images/feedPhoto.jpg" class="profile-picture__picture" />
-            <div class="profile-picture__overlay">
-              <span class="profile-picture__number">
-                <i class="fa fa-heart"></i> 450
-              </span>
-              <span class="profile-picture__number">
-                <i class="fa fa-comment"></i> 39
-              </span>
-            </div>
-          </a>
+          
         </div>
       </section>
     </main>
@@ -113,11 +59,43 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 export default {
-  name: "Profile",
+  name: 'Profile',
   components: {
     Header,
     Footer
+  },
+  
+  data(){
+
+    return{
+      pictures: [{
+  id: 2014422,
+  width: 3024,
+  height: 3024,
+  url: "https://www.pexels.com/photo/brown-rocks-during-golden-hour-2014422/",
+  src: {
+    original: "https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg",
+    large2x: "https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    large: "https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    medium: "https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg?auto=compress&cs=tinysrgb&h=350",
+    small: "https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg?auto=compress&cs=tinysrgb&h=130",
+    portrait: "https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+    landscape: "https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+    tiny: "https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
   }
+}
+        
+      ]
+    };
+  },
+  async created() {
+      await fetch("https://api.pexels.com/v1")
+        .then((response) => {
+          response.img().then(pictures => {
+            this.pictures = pictures;
+          });
+        });
+    }
 };
 </script>
 <style>
