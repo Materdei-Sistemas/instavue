@@ -10,10 +10,10 @@ const sequelize = new Sequelize({
 
 sequelize.Post = sequelize.import('./Post.js');
 sequelize.Like = sequelize.import('./Like.js');
+sequelize.Notification = sequelize.import('./Notification.js');
 
 // relacionamento
 sequelize.Like.belongsTo(sequelize.Post, {  foreignKey: 'PosID'});
-
 
 // Sincroniza as definições de models com o banco de dados
 sequelize.sync();

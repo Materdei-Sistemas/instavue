@@ -7,6 +7,7 @@ const LikeController = require('./controllers/LikeController');
 // Implementadas
 router.get('/posts', [], PostController.find);
 router.post('/posts', [], PostController.create);
+router.get('/notifications', [], NotificationController.find);
 
 // TODO
 router.get('/posts/:id', [], PostController.findOne);
