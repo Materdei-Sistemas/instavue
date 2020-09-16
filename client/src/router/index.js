@@ -7,6 +7,7 @@ import Explore from'../views/Explore.vue';
 import Profile from '../views/Profile.vue';
 import Feed from '../views/Feed.vue';
 import EditarUsuario from '../views/EditarUsuario.vue';
+import Notifications from '../views/Notifications.vue';
 
 Vue.use(VueRouter)
 
@@ -48,6 +49,11 @@ const routes = [
     path: '/feed',
     name: 'Feed',
     component: Feed
+  },
+  {
+    path: '/notifications',
+    name: 'Notifications',
+    component: Notifications
   }
 ]
 
