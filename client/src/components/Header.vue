@@ -1,13 +1,13 @@
 <template>
   <nav class="navigation">
-    <a href="/">
+    <router-link to="/">
       <img 
           src="../assets/images/navLogo.png"
           alt="logo"
           title="logo"
           class="navigation__logo"
       />
-    </a>
+    </router-link>
     <div class="navigation__search-container">
       <i class="fa fa-search"></i>
       <input type="text" placeholder="Search">
