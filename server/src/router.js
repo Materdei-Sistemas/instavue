@@ -6,6 +6,7 @@ const router = express.Router();
  */
 const AuthController = require('./controllers/AuthController');
 const PostController = require('./controllers/PostController');
+const PutController = require('./controllers/PutController');
 
 /**
  * Middlewares
@@ -24,7 +25,7 @@ router.post('/posts', [], PostController.create);
 
 // TODO
 router.get('/posts/:id', [], PostController.findOne);
-router.put('/posts/:id', [], PostController.update);
+router.put('/put/:id', [], PutController.update);
 router.delete('/posts/:id', [], PostController.delete);
 
 module.exports = (app) => app.use(router);
