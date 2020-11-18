@@ -14,7 +14,16 @@ const routes = [
   {
     path: '/',
     name: 'Feed',
-    component: Feed
+    component: Feed,
+    beforeEnter: (to, from, next) => {
+      const token = localStorage.getItem('instavue-token');
+
+      if(token) {
+        next();
+      } else {
+        next('/login');
+      }
+    }
   },
   {
     path: '/about',

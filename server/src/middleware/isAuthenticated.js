@@ -19,10 +19,10 @@ module.exports = function (req, res, next) {
         token = credentials;
       }
     } else {
-      return res.status(400).send('Token inválido');
+      return res.status(401).send('Token inválido');
     } 
   } else {
-    return res.status(400).send('Token inválido');
+    return res.status(401).send('Token inválido');
   }
 
   Token.verify(token, async (err, tokenUser) => {

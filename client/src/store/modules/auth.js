@@ -31,7 +31,12 @@ const actions = {
       commit('AUTH_ERROR');
       throw e;
     }
-  }
+  },
+
+  restore ({ commit }) {
+    const token = localStorage.getItem(LOCALSTORAGE_KEY);
+    commit('TOKEN', token);
+  },
 };
 
 const mutations = {
